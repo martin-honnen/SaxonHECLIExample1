@@ -1,6 +1,7 @@
 #include "pch.h"
 
 using namespace System;
+using namespace System::IO;
 using namespace Saxon::Api;
 
 int main(array<System::String ^> ^args)
@@ -23,7 +24,11 @@ int main(array<System::String ^> ^args)
 
     Xslt30Transformer^ xslt30Transformer = xsltExecutable->Load30();
 
-    xslt30Transformer->ApplyTemplates(inputDoc, processor->NewSerializer(Console::Out));
+    FileStream^ resultStream = File::OpenWrite("result1.xml");
+
+    xslt30Transformer->ApplyTemplates(inputDoc, processor->NewSerializer(resultStream));
+
+    resultStream->Close();
 
     return 0;
 }
