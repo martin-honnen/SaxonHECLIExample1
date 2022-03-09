@@ -143,15 +143,12 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="saxon-he-api-10.6">
-      <HintPath>..\packages\Saxon-HE.10.6.0\lib\net35\saxon-he-api-10.6.dll</HintPath>
+    <Reference Include="saxon-he-api-10.7">
+      <HintPath>..\packages\Saxon-HE.10.7.0\lib\net40\saxon-he-api-10.7.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="input-sample1.xml">
@@ -160,6 +157,9 @@
     <Xml Include="sheet1.xsl">
       <DeploymentContent>true</DeploymentContent>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

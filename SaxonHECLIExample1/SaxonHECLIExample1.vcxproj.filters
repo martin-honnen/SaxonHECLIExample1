@@ -44,10 +44,10 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Xml Include="input-sample1.xml" />
     <Xml Include="sheet1.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
